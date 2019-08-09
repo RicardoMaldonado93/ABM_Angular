@@ -22,9 +22,7 @@ export class ContratiemposServicioService {
         
         catchError( this.handleError)
       );
-      
-  }
-  catch(Exception:ExceptionInformation ){ }
+   }
 
    private handleError( error : HttpErrorResponse){
       return throwError(console.log(error));
