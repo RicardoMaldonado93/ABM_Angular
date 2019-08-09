@@ -1,18 +1,32 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+import { ListaComponent } from './feacture/clientes/lista/lista.component';
+import { ItemComponent } from './feacture/clientes/item/item.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ContratiemposServicioService } from './contratiempos-servicio.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ListaComponent,
+    ItemComponent,
+
   ],
   imports: [
-    BrowserModule,
+    BrowserModule, HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule
+
   ],
-  providers: [],
+  providers: [ContratiemposServicioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
