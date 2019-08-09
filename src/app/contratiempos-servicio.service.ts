@@ -19,9 +19,12 @@ export class ContratiemposServicioService {
         map( (res) => {
           return this.Clientes = <ICliente[]>res['datos'];
         }),
+        
         catchError( this.handleError)
       );
-   }
+      
+  }
+  catch(Exception:ExceptionInformation ){ }
 
    private handleError( error : HttpErrorResponse){
       return throwError(console.log(error));
